@@ -1,0 +1,61 @@
+openapi: 3.0.0
+info:
+  title: Wildcard API
+  version: 1.0.0
+  description: API specification that accepts any method on any path
+
+paths:
+  /*:
+    parameters: []
+    x-wildcard-method: true
+    options:
+      summary: Catch-all method handler
+      responses:
+        '200':
+          description: Successful response for any method
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  method:
+                    type: string
+                    description: Incoming HTTP method
+                  path:
+                    type: string
+                    description: Requested path
+    get:
+      summary: Catch-all GET handler
+      responses:
+        '200':
+          description: Successful GET response
+    post:
+      summary: Catch-all POST handler
+      responses:
+        '200':
+          description: Successful POST response
+    put:
+      summary: Catch-all PUT handler
+      responses:
+        '200':
+          description: Successful PUT response
+    delete:
+      summary: Catch-all DELETE handler
+      responses:
+        '200':
+          description: Successful DELETE response
+    patch:
+      summary: Catch-all PATCH handler
+      responses:
+        '200':
+          description: Successful PATCH response
+    head:
+      summary: Catch-all HEAD handler
+      responses:
+        '200':
+          description: Successful HEAD response
+    trace:
+      summary: Catch-all TRACE handler
+      responses:
+        '200':
+          description: Successful TRACE response
