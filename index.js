@@ -11,10 +11,11 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Read environment variables for OAuth and backend configuration
-const tokenUrl = process.env.CHOREO_TEST_CONNECTION_TOKENURL;
-const consumerKey = process.env.CHOREO_TEST_CONNECTION_CONSUMERKEY;
-const consumerSecret = process.env.CHOREO_TEST_CONNECTION_CONSUMERSECRET;
-const backendUrl = process.env.CHOREO_TEST_CONNECTION_SERVICEURL;
+const tokenUrl = process.env.CHOREO_BOOK_LISTING_CONNECTION_TOKENURL;
+const consumerKey = process.env.CHOREO_BOOK_LISTING_CONNECTION_CONSUMERKEY;
+const consumerSecret =
+  process.env.CHOREO_BOOK_LISTING_CONNECTION_CONSUMERSECRET;
+const backendUrl = process.env.CHOREO_BOOK_LISTING_CONNECTION_SERVICEURL;
 
 if (!tokenUrl || !consumerKey || !consumerSecret || !backendUrl) {
   console.error(
